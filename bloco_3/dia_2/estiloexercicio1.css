@@ -1,0 +1,10 @@
+<meta charset="UTF-8">
+body {font-size: 16px;}
+h1 {whidth=65px; color: orange; font-family: sans-serif;}
+.listaCorFavorita {background-color: green;}
+#listaNaoOrdenada {background-color:cadetblue;}
+p {font-weight: 600; font-size: 3em; font-style: oblique; text-align:center;}
+li {line-height: 50px; text-decoration:underline; font-size: 2em;}
+#item1 {color:yellow;}
+#item2 {color:red;}
+#item3 {color:brown;}
