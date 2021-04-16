@@ -1,0 +1,30 @@
+.primaria:hover {
+    border: 5px solid rgb(4, 109, 4);
+}
+.secundaria:hover {
+    border: 5px solid rgb(235, 5, 5);
+}
+.complementar:hover {
+    border: 5px solid rgb(4, 4, 218);
+}
+.escura:hover {
+    border: 5px solid rgb(41, 1, 41);
+}
+.clara:hover {
+    border: 5px solid rgb(255, 255, 0);
+}
+.titulo1 {
+    color: rgb(4, 109, 4); font-style: italic;
+}
+.titulo2 {
+    color: rgb(235, 5, 5);
+}
+.titulo3 {
+    color: rgb(4, 4, 218); font-size: 30px; font-style: italic;
+}
+.titulo4 {
+    color: rgb(41, 1, 41);
+}
+.titulo5 {
+    color: rgb(255, 255, 0); font-style: italic;
+}
