@@ -1,15 +1,48 @@
+body {
+    margin: 0%;
+    background-color:rgb(214, 213, 213);
+}
+
 nav {
     position: fixed;
-    background-color: 523249;
-
+    width: 100%;
+    background-color:rgb(122, 21, 21);
+    height: 30px;
+    text-align: center;
 }
 
 nav a {
-    padding: 20px;
+    padding: 10%;
+    text-decoration: none;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 header {
     padding-top: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(55, 71, 71);
+    margin-left: 20px;
+    height: 0px;
 }
 
+.content {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 20px;
+}
 
+.content p {
+    width: 500px;
+    text-indent: 30px;
+    text-align: justify;
+    background-size: max-content;
+}
+
+.table {
+    float: right;
+    width: 100px;
+}
+
+.table tbody tr td{
+    width: max-content;
+}
