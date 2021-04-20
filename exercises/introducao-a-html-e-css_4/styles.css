@@ -1,0 +1,15 @@
+nav {
+    position: fixed;
+    background-color: 523249;
+
+}
+
+nav a {
+    padding: 20px;
+}
+
+header {
+    padding-top: 25px;
+}
+
+
