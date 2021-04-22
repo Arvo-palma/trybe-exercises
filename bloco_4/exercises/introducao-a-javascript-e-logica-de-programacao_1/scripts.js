@@ -92,3 +92,13 @@ if (nota > 100){
 } else {
     console.log("Erro"); 
 }
+
+let num1=3;
+let num2=2;
+let num3=7;
+let ifEven = (num1 + num2 + num3)%2
+if (ifEven===0){
+    console.log(true);
+} else {
+    console.log(false);
+}
