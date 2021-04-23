@@ -6,4 +6,6 @@ for (let index = 0; index < numbers.length; index += 1){
     soma = soma + numbers[index];
 };
 
-console.log(soma);
+media = soma / numbers.length;
+
+console.log(media);
