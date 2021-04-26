@@ -1,12 +1,12 @@
-let n = 5;
+let n = 8;
 
-for (linha = 1; linha <= n; linha += 1) {
+for (let linha = 1; linha <= n; linha += 1) {
     let triangulo = " ";
-    for (espaco = n - linha; espaco > 0; espaco -= 1) {
+    for (let espaco = n - linha; espaco > 0; espaco -= 1) {
         triangulo = triangulo + " ";
     }
     
-    for (asterisco = 1; asterisco <= linha; asterisco += 1) {
+    for (let asterisco = 1; asterisco <= linha; asterisco += 1) {
         triangulo = triangulo + ('*');
     }
     console.log(triangulo);
