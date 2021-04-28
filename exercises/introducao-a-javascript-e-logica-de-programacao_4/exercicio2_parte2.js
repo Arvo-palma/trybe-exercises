@@ -1,5 +1,5 @@
 function biggerInput(integerArray) {
-    let biggerValue = 0;
+    let biggerValue = Number.NEGATIVE_INFINITY;
     for (index = 0; index <= integerArray.length; index += 1) {
         if (integerArray[index] > biggerValue) {
             biggerValue = integerArray[index];
