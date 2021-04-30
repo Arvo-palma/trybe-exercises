@@ -67,7 +67,17 @@
       body.appendChild(mainContent);
       let centerContent = document.createElement('div');
       centerContent.className = 'center-content';
-      body.appendChild(centerContent);
+      mainContent.appendChild(centerContent);
+      let paragraph = document.createElement('p');
+      paragraph.innerText = 'Texto da etapa 4 do exercicio do dia 5.2'
+      centerContent.appendChild(paragraph);
+      let leftContent = document.createElement('div');
+      leftContent.className = 'left-content';
+      mainContent.appendChild(leftContent);
+      let rightContent = document.createElement('div');
+      rightContent.className = 'right-content';
+      mainContent.appendChild(rightContent);
+      
 
     </script>
   </body>
