@@ -117,7 +117,36 @@
       }
 
       let title3 = document.createElement('h3');
+
       mainContent.appendChild(title3);
+
+      h1.className = 'title';
+
+      title3.className = 'description';
+
+      mainContent.removeChild(leftContent);
+
+      rightContent.style.marginRight = 'auto';
+
+      centerContent.parentElement.style.backgroundColor = 'green';
+      
+      for (let index = 0; index < unordenedList.childNodes.length; index += 1) {
+        
+        let sequencialList = unordenedList.childNodes[index];
+
+        if (sequencialList.innerText.includes('Nove')) {
+              unordenedList.removeChild(sequencialList);
+          }
+      }
+
+      for (let index = 0; index < unordenedList.childNodes.length; index += 1) {
+        
+        let sequencialList = unordenedList.childNodes[index];
+
+        if (sequencialList.innerText.includes('Dez')) {
+              unordenedList.removeChild(sequencialList);
+          }
+      }
 
     </script>
   </body>
