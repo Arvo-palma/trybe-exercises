@@ -59,25 +59,65 @@
     <script>
 
       let body = document.body;
+
       let h1 = document.createElement('h1');
+
       h1.innerText = 'Exercício 5.2 - JavaScript DOM';
+
       body.appendChild(h1);
+
       let mainContent = document.createElement('div');
+
       mainContent.className = 'main-content';
+
       body.appendChild(mainContent);
+
       let centerContent = document.createElement('div');
+
       centerContent.className = 'center-content';
+
       mainContent.appendChild(centerContent);
+
       let paragraph = document.createElement('p');
-      paragraph.innerText = 'Texto da etapa 4 do exercicio do dia 5.2'
+
+      paragraph.innerText = 'Texto da etapa 4 do exercicio do dia 5.2';
+
       centerContent.appendChild(paragraph);
+
       let leftContent = document.createElement('div');
+
       leftContent.className = 'left-content';
+
       mainContent.appendChild(leftContent);
+
       let rightContent = document.createElement('div');
+
       rightContent.className = 'right-content';
+
       mainContent.appendChild(rightContent);
-      
+
+      let image = document.createElement('img');
+
+      image.src = 'https://picsum.photos/200 ';
+
+      image.className = 'small-image';
+
+      leftContent.appendChild(image);
+
+      let unordenedList = document.createElement('ul');
+
+      rightContent.appendChild(unordenedList);
+
+      let numbersExtended = ['Um', 'Dois', 'Trẽs', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
+
+      for (let valor = 0; valor < 10; valor += 1) {
+          let item = document.createElement('li');
+          item.innerText = numbersExtended[valor]; 
+          unordenedList.appendChild(item);
+      }
+
+      let title3 = document.createElement('h3');
+      mainContent.appendChild(title3);
 
     </script>
   </body>
