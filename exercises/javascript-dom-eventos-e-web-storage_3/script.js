@@ -44,11 +44,33 @@ for (let index = 0; index < dezDaysList.length; index += 1) {
 document.querySelectorAll('.day')[dezDaysList.indexOf(25)].classList.add('day', 'holiday', 'friday');
 
 function holidaysButton (Feriados) {
-    let holidaysButton = document.createElement('button');
-    holidaysButton.id = 'btn-holiday';
-    holidaysButton.innerHTML = 'Feriados';
-    document.querySelector('.buttons-container').appendChild(holidaysButton);
+    let holidayButton = document.createElement('button');
+    holidayButton.id = 'btn-holiday';
+    holidayButton.innerHTML = 'Feriados';
+    document.querySelector('.buttons-container').appendChild(holidayButton);
 }
 
 holidaysButton();
 
+let changed = 0;
+
+function holidays () {
+    let holiday = document.querySelectorAll('.holiday');
+        if (changed == 0) {
+            for (let index = 0; index < holiday.length; index += 1) {
+                holiday[index].style.backgroundColor = 'green';
+                holiday[index].style.color = 'white';
+                changed = 1;
+            }
+        } else {
+            for (let index = 0; index < holiday.length; index += 1) {
+                holiday[index].style.backgroundColor = 'rgb(238,238,238)';
+                holiday[index].style.color = '#777';
+                changed = 0;
+        };
+    };
+  };
+
+let holidayButton = document.querySelector('#btn-holiday');
+
+holidayButton.addEventListener('click', holidays);
