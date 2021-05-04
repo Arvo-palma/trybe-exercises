@@ -74,3 +74,12 @@ function holidays () {
 let holidayButton = document.querySelector('#btn-holiday');
 
 holidayButton.addEventListener('click', holidays);
+
+function fridayButton (SextaFeira) {
+    let fridayButton = document.createElement('button');
+    fridayButton.id = 'btn-friday';
+    fridayButton.innerHTML = 'Sexta-feira';
+    document.querySelector('.buttons-container').appendChild(fridayButton);
+}
+
+fridayButton();
