@@ -75,11 +75,31 @@ let holidayButton = document.querySelector('#btn-holiday');
 
 holidayButton.addEventListener('click', holidays);
 
-function fridayButton (SextaFeira) {
+function fridaysButton (SextaFeira) {
     let fridayButton = document.createElement('button');
     fridayButton.id = 'btn-friday';
     fridayButton.innerHTML = 'Sexta-feira';
     document.querySelector('.buttons-container').appendChild(fridayButton);
 }
 
-fridayButton();
+fridaysButton();
+
+function fridays () {
+    let friday = document.querySelectorAll('.friday');
+        if (changed == 0) {
+            for (let index = 0; index < friday.length; index += 1) {
+                friday[index].innerHTML = 'Sexta-feira';
+                changed = 1;
+            }
+        } else {
+            friday[0].innerHTML = 4;
+            friday[1].innerHTML = 11;
+            friday[2].innerHTML = 18;
+            friday[3].innerHTML = 25;
+            changed = 0;
+        };
+  };
+
+let fridayButton = document.querySelector('#btn-friday');
+
+fridayButton.addEventListener('click', fridays);
