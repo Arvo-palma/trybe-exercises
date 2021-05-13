@@ -9,14 +9,6 @@ function addState() {
 
 addState();
 
-function stopDefAction(event) {
-  event.preventDefault();
-}
-
-// document.addEventListener(
-//   'click', stopDefAction, false
-// );
-
 let nome = document.querySelector('#name');
 let email = document.querySelector('#e-mail');
 let cpf = document.querySelector('#CPF');
@@ -33,47 +25,124 @@ let dataDeInicio = document.querySelector('#start-date');
 let stateSelected = false;
 let residenceTypeSelected = false;
 
-estado.addEventListener('click', changed(){
+estado.addEventListener('click', function() {
   stateSelected = true;
 });
 
-tipoDeResidencia1.addEventListener('click', changed(){
+tipoDeResidencia1.addEventListener('click', function() {
   residenceTypeSelected = true;
 });
 
-tipoDeResidencia2.addEventListener('click', changed(){
+tipoDeResidencia2.addEventListener('click', function() {
   residenceTypeSelected = true;
 });
+
+function createSubmit() {
+  let submitBtn = document.createElement('button');
+  submitBtn.innerHTML = 'Enviar';
+  submitBtn.type = 'submit';
+  submitBtn.id = 'submit';
+  document.querySelector('#form').appendChild(submitBtn);
+}
+
+createSubmit();
+
+function stopDefAction(event) {
+  event.preventDefault();
+}
+
+document.querySelector('#submit').addEventListener('click', stopDefAction, validation, false);
+
+document.querySelector('#submit').addEventListener('click', validation, false);
+
+let error = document.querySelector('#error');
 
 function validation() {
-  let valid = true;
-  let message;
-  if (nome.length > 40 || nome.innerText === "") {
-    valid = false;
-    message = 'Nome incorreto';
+  if (nome.value === "") {
+    error.innerHTML = 'Erro no preenchimento 1';
   }
-  if (email.length > 50 || email.innerText === "") {
-    valid = false;
-    message += '/ email incorreto';
+  if (email.value === "") {
+    error.innerHTML = 'Erro no preenchimento 2';
   }
-  if (cpf.length > 11 || cpf.innerText != Number) {
-    valid = false;
-    message += '/ cpf incorreto';
+  if (cpf.value === "") {
+    error.innerHTML = 'Erro no preenchimento 3';
   }
-  if (endereco.length > 200 || endereco.innerText === "") {
-    valid = false;
-    message += '/ Endereço incorreto';
+  if (endereco.value === "") {
+    error.innerHTML = 'Erro no preenchimento 4';
   }
-  if (cidade.length > 28 || cidade.innerText ==="") {
-    valid = false;
-    message += '/ Nome de cidade incorreto';
+  if (cidade.value ==="") {
+    error.innerHTML = 'Erro no preenchimento 5';
   }
-  if (estado.length != 27 || stateSelected === false) {
-    valid = false;
-    message += '/ Selecione estado';
+  if (stateSelected === false) {
+    error.innerHTML = 'Confirme estado';
   }
   if (residenceTypeSelected === false) {
-    valid = false;
-    message += '/ Selecione o tipo de residência';
+    error.innerHTML = 'Erro no preenchimento 6';
+  }
+  if (resumo.value === "") {
+    error.innerHTML = 'Erro no preenchimento 7';
+  }
+  if (cargo.value === "") {
+    error.innerHTML = 'Erro no preenchimento 8';
+  }
+  if (descricaoCargo.value === "") {
+    error.innerHTML = 'Erro no preenchimento 9';
+  }
+  if (dataDeInicio.type !== 'date') {
+    error.innerHTML += 'Formato errado de data';
+  }
+  if (dataDeInicio[8] + dataDeInicio[9] <= 00 || dataDeInicio[8] + dataDeInicio[9] > 31) {
+    error.innerHTML += 'Dia de início errado';
+  }
+  if (dataDeInicio[5] + dataDeInicio[6] <= 00 || dataDeInicio[5] + dataDeInicio[6] > 12) {
+    error.innerHTML += 'Mês de início errado';
+  }
+  if (dataDeInicio[0] + dataDeInicio[1] < 0) {
+    error.innerHTML += 'Ano errado';
+  }
+  if (error.innerHTML === "") {
+    error.innerHTML = nome.value + email.value + cpf.value + endereco.value + cidade.value + estado.value;
   }
 }
+
+function reloadPage() {
+  location.reload();
+}
+
+document.querySelector('#cancel').addEventListener('click', reloadPage);
+
+// function validation() {
+//   let valid = true;
+//   let message;
+//   if (nome.length > 40 || nome.innerText === "") {
+//     valid = false;
+//     message = 'Nome incorreto';
+//   }
+//   if (email.length > 50 || email.innerText === "") {
+//     valid = false;
+//     message += '/ email incorreto';
+//   }
+//   if (cpf.length > 11 || cpf.innerText != Number) {
+//     valid = false;
+//     message += '/ cpf incorreto';
+//   }
+//   if (endereco.length > 200 || endereco.innerText === "") {
+//     valid = false;
+//     message += '/ Endereço incorreto';
+//   }
+//   if (cidade.length > 28 || cidade.innerText ==="") {
+//     valid = false;
+//     message += '/ Nome de cidade incorreto';
+//   }
+//   if (estado.length != 27 || stateSelected === false) {
+//     valid = false;
+//     message += '/ Selecione estado';
+//   }
+//   if (residenceTypeSelected === false) {
+//     valid = false;
+//     message += '/ Selecione o tipo de residência';
+//   }
+//   if (resumo.length > 1000 || resumo.innerText === "") {
+//     valid = false;
+//     message += "/ Resumo obrigatório";
+//   }
