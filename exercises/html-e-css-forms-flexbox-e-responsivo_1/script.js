@@ -22,6 +22,21 @@ let cargo = document.querySelector('#role');
 let descricaoCargo = document.querySelector('#role-description');
 let dataDeInicio = document.querySelector('#start-date');
 
+let tipoDeResidencia;
+
+function residenceType(event) {
+  if (event.target === tipoDeResidencia1) {
+    tipoDeResidencia = 'Casa';
+  }
+  if (event.target === tipoDeResidencia2) {
+    tipoDeResidencia = 'Apartamento';
+  }
+}
+
+tipoDeResidencia1.addEventListener('click', residenceType);
+
+tipoDeResidencia2.addEventListener('click', residenceType);
+
 let stateSelected = false;
 let residenceTypeSelected = false;
 
@@ -101,7 +116,7 @@ function validation() {
     error.innerHTML += 'Ano errado';
   }
   if (error.innerHTML === "") {
-    error.innerHTML = nome.value + email.value + cpf.value + endereco.value + cidade.value + estado.value;
+    error.innerHTML = 'name: ' + nome.value + '; email: ' + email.value + '; CPF: ' + cpf.value + '; endereço: ' + endereco.value + '; cidade: ' + cidade.value + '; estado: ' + estado.value + '; tipo de residência: ' + tipoDeResidencia + '; resumo do currículo: ' + resumo.value + '; cargo: ' + cargo.value + '; descrição do cargo: ' + descricaoCargo.value + '; data de inicio: ' + dataDeInicio.value;
   }
 }
 
@@ -111,38 +126,3 @@ function reloadPage() {
 
 document.querySelector('#cancel').addEventListener('click', reloadPage);
 
-// function validation() {
-//   let valid = true;
-//   let message;
-//   if (nome.length > 40 || nome.innerText === "") {
-//     valid = false;
-//     message = 'Nome incorreto';
-//   }
-//   if (email.length > 50 || email.innerText === "") {
-//     valid = false;
-//     message += '/ email incorreto';
-//   }
-//   if (cpf.length > 11 || cpf.innerText != Number) {
-//     valid = false;
-//     message += '/ cpf incorreto';
-//   }
-//   if (endereco.length > 200 || endereco.innerText === "") {
-//     valid = false;
-//     message += '/ Endereço incorreto';
-//   }
-//   if (cidade.length > 28 || cidade.innerText ==="") {
-//     valid = false;
-//     message += '/ Nome de cidade incorreto';
-//   }
-//   if (estado.length != 27 || stateSelected === false) {
-//     valid = false;
-//     message += '/ Selecione estado';
-//   }
-//   if (residenceTypeSelected === false) {
-//     valid = false;
-//     message += '/ Selecione o tipo de residência';
-//   }
-//   if (resumo.length > 1000 || resumo.innerText === "") {
-//     valid = false;
-//     message += "/ Resumo obrigatório";
-//   }
