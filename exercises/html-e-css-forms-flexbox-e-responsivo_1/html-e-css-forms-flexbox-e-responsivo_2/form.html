@@ -1,58 +1,62 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="dist/css/DatePickerX.min.css">
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title></title>
   </head>
-  <body>
+  <body id="body">
     <form action="" method="GET" id="form">
-        <fieldset id="personal-data">
-            <label for="name">Nome
-                <input name="name" id="name" type="text" maxlength="40" required>
+        <fieldset id="personal-data" class="mb-3">
+            <label for="name" class="form-label">Nome
+                <input name="name" id="name" class="form-control" type="text" maxlength="40" required>
             </label>
             <br>
-            <label for="e-mail">Email
-                <input name="e-mail" id="e-mail" type="email" maxlength="50" required>
+            <label for="e-mail" class="form-label">Email
+                <input name="e-mail" id="e-mail" class="form-control"  type="email" maxlength="50" required>
             </label>
             <br>
-            <label for="CPF">CPF
-                <input name="CPF" id="CPF" type="text" maxlength="11" required>
+            <label for="CPF" class="form-label">CPF
+                <input name="CPF" id="CPF" class="form-control" type="text" maxlength="11" required>
             </label>
             <br>
-            <label for="adress">Endereço
-                <input name="adress" id="adress" type="text" maxlength="200" required>
+            <label for="adress" class="form-label">Endereço
+                <input name="adress" id="adress" class="form-control" type="text" maxlength="200" required>
             </label>
             <br>
-            <label for="city">Cidade
-                <input name="city" id="city" type="text" maxlength="28" required>
+            <label for="city" class="form-label">Cidade
+                <input name="city" id="city" class="form-control" type="text" maxlength="28" required>
             </label>
             <br>
-            <label for="state">Estado
-                <select name="state" id="state" required>
+            <label for="state" class="form-label">Estado
+                <select name="state" id="state" class="form-control" required>
                 </select>
             </label>
             <br>
-            <label for="residence-type1">Tipo de residência
-                <input name="residence-type" id="residence-type1" type="radio" required>Casa
+            <p>Tipo de residência: </p>
+            <label for="residence-type1" class="btn btn-outline-primary">
+                <input name="residence-type" id="residence-type1" class="btn-check" type="radio" required>Casa
             </label>
-            <label for="residence-type2">
-                <input name="residence-type" id="residence-type2" type="radio" required>Apartamento
+            <label for="residence-type2" class="btn btn-outline-primary">
+                <input name="residence-type" id="residence-type2" class="btn-check" type="radio" required>Apartamento
             </label>
             <br>
         </fieldset>
-        <fieldset>
-            <label for="resume">Resumo do Currículo
-                <textarea name="curriculum" id="resume" type="text" maxlength="1000" required cols="50" rows="5"></textarea>
+        <fieldset lass="mb-3">
+            <label for="resume" class="form-label">Resumo do Currículo
+                <textarea name="curriculum" id="resume" type="text" maxlength="1000" required cols="50" rows="5" class="form-control" ></textarea>
             </label>
             <br>
-            <label for="role">Cargo
-                <input name="responsibility" id="role" type="text" maxlength="40" required>
+            <label for="role" class="form-label">Cargo
+                <input name="responsibility" id="role" class="form-control" type="text" maxlength="40" required>
             </label>
             <br>
-            <label for="role-description">Descrição do cargo
-                <input name="role-description" id="role-description" type="text" maxlength="500" required>
+            <label for="role-description" class="form-label">Descrição do cargo
+                <input name="role-description" id="role-description" class="form-control" type="text" maxlength="500" required>
             </label>
             <br>
             <label for="start-date">Data de início
@@ -63,6 +67,9 @@
         <button id="cancel">Cancelar</button>
     </form>
     <div id="error"></div>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <script src="dist/js/DatePickerX.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
