@@ -1,0 +1,40 @@
+body {
+  font-size: x-large;
+}
+
+h1 {
+  font-size: xx-large;
+}
+
+h2 {
+  font-size: xx-large;
+}
+
+img {
+    max-width: 100%;
+    padding-bottom: 20px;
+}
+
+figure {
+    margin: 20px;
+}
+
+@media screen and (min-width: 1020px) {
+    body {
+    background-color: rgb(131, 23, 23);
+    font-size: large;
+    }
+
+    figure {
+    display: inline-block;
+    }
+}
+
+@media screen and (min-width: 1450px) {
+    body {
+        background-color:cadetblue;
+        font-size: medium;
+        margin: 30px;
+        max-width: 1550px;
+    }
+}
