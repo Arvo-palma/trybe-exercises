@@ -63,4 +63,11 @@ const books = [
   },
 ];
 
-// Adicione o código do exercício aqui:
+const expectedResult = false;
+
+function everyoneWasBornOnSecXX() {
+  const theyAreOldAsAFuck = books.every((book) => book.author.birthYear < 1900);
+  return theyAreOldAsAFuck;
+}
+
+assert.strictEqual(everyoneWasBornOnSecXX(), expectedResult);
