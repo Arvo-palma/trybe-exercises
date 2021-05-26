@@ -63,4 +63,16 @@ const books = [
   },
 ];
 
-// Adicione o código do exercício aqui:
+function smallerName() {
+    let nameBook;
+    let nameSize = Number.POSITIVE_INFINITY;
+    books.forEach((book) => {
+        if(book.name.length < nameSize) {
+            nameSize = book.name.length;
+            nameBook = book.name;
+        }
+    })
+    return nameBook;
+  }
+  
+  assert.strictEqual(smallerName(), 'Duna');
