@@ -63,4 +63,19 @@ const books = [
   },
 ];
 
-// Adicione o código do exercício aqui:
+const expectedResult = false;
+
+function authorUnique() {
+  const isUnique = books.forEach((book) => {
+    let booksClone = [];
+    Object.assign(booksClone, books);
+    booksClone[books.indexOf(book)].author.birthYear = 0;
+    booksClone.forEach((book) => booksClone[booksClone.indexOf(book)] = {index: book});
+    const check = books.some((book) => book.author.birthYear === booksClone.index.author.birthYear);
+    Object.assign(booksClone, books);
+    return check;
+  });
+  return isUnique;
+}
+
+assert.strictEqual(authorUnique(), expectedResult);
