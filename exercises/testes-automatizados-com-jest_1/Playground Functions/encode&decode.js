@@ -44,5 +44,7 @@ function decode(string) {
   return codedString;
 }
 
-module.exports = encode;
-module.exports = decode;
+module.exports =  { 
+  encode,
+  decode
+  } 

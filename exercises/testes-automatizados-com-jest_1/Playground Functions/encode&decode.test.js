@@ -1,6 +1,5 @@
 const { expect, describe, test } = require('@jest/globals');
-const encode = require('./encode&decode');
-const decode = require('./encode&decode');
+const { encode, decode } = require('./encode&decode');
 
 describe('Função encode', () => {
   test('Confere a conversão', () => {
